@@ -23,7 +23,7 @@ document.addEventListener('DOMContentLoaded', () => {
             e.preventDefault();
             const targetId = this.getAttribute('href');
             const targetElement = document.querySelector(targetId);
-            
+
             if (targetElement) {
                 window.scrollTo({
                     top: targetElement.offsetTop - 70, // Adjust for fixed header
@@ -73,7 +73,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Scroll Animation for Elements (Fade Up)
     const fadeElements = document.querySelectorAll('.about-card, .section-header');
-    
+
     const fadeObserver = new IntersectionObserver((entries) => {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
@@ -89,4 +89,27 @@ document.addEventListener('DOMContentLoaded', () => {
         el.style.transition = 'opacity 0.6s ease-out, transform 0.6s ease-out';
         fadeObserver.observe(el);
     });
+
+    // Carousel Logic
+    const track = document.querySelector('.carousel-track');
+    if (track) {
+        const slides = Array.from(track.children);
+        let currentSlideIndex = 0;
+
+        function moveToSlide(index) {
+            track.style.transform = 'translateX(-' + (index * 100) + '%)';
+            currentSlideIndex = index;
+        }
+
+        function nextSlide() {
+            let nextIndex = currentSlideIndex + 1;
+            if (nextIndex >= slides.length) {
+                nextIndex = 0;
+            }
+            moveToSlide(nextIndex);
+        }
+
+        // Auto slide every 3 seconds
+        setInterval(nextSlide, 3000);
+    }
 });
