@@ -403,6 +403,58 @@ footer {
     color: var(--secondary-color);
 }
 
+/* LRTS Connect Section */
+.connect .section-header {
+    margin-bottom: 20px;
+}
+
+.connect .social-icons {
+    display: flex;
+    gap: 24px;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10px;
+}
+
+.connect .social-link {
+    color: #9ca3af; /* gray default */
+    font-size: 2.6rem; /* slightly larger */
+    width: 72px;
+    height: 72px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 14px;
+    background: transparent;
+    transition: transform 0.18s ease, color 0.18s ease;
+}
+
+.connect .social-link i {
+    color: inherit; /* inherit the gray color */
+}
+
+.connect .social-link:focus {
+    outline: 3px solid rgba(59,130,246,0.16);
+    outline-offset: 4px;
+}
+
+.connect .social-link:hover {
+    transform: translateY(-8px);
+}
+
+/* Brand colours on hover */
+.connect .social-link:hover .fa-instagram {
+    color: #E1306C;
+}
+
+.connect .social-link:hover .fa-youtube {
+    color: #FF0000;
+}
+
+.connect .social-link:hover .fa-linkedin {
+    color: #0A66C2;
+}
+
 .signature {
     font-size: 0.8rem;
     opacity: 0.7;

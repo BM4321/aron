@@ -39,15 +39,16 @@ document.addEventListener('DOMContentLoaded', () => {
     let started = false; // Function started ? No
 
     function startCount(el) {
-        const target = parseInt(el.dataset.target);
-        const count = +el.innerText;
-        const increment = target / 200; // Adjust speed
+        const target = parseInt(el.dataset.target, 10) || 0;
+        let count = parseInt(String(el.innerText).replace(/\D/g, ''), 10) || 0;
+        const increment = Math.ceil(target / 200); // Adjust speed
 
         if (count < target) {
-            el.innerText = Math.ceil(count + increment);
+            count = Math.min(count + increment, target);
+            el.innerText = count.toLocaleString();
             setTimeout(() => startCount(el), 10);
         } else {
-            el.innerText = target + "+"; // Add + sign for impact
+            el.innerText = target.toLocaleString() + "+"; // Add + sign for impact
         }
     }
 
