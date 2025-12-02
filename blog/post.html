@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog Post | Aron's Space</title>
+    <link rel="stylesheet" href="../css/styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Playfair+Display:wght@700&display=swap"
+        rel="stylesheet">
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Marked.js for Markdown rendering -->
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+</head>
+
+<body>
+    <nav class="navbar">
+        <div class="container nav-container">
+            <a href="../index.html" class="logo">Aron's Space<span>.</span></a>
+            <ul class="nav-links">
+                <li><a href="../index.html#hero">Home</a></li>
+                <li><a href="../index.html#about">About</a></li>
+                <li><a href="../index.html#impact">Impact</a></li>
+                <li><a href="../resume.html">Resume</a></li>
+                <li><a href="index.html" class="active">Blog</a></li>
+                <li><a href="../index.html#contact">Contact</a></li>
+                <li><button id="theme-toggle" aria-label="Toggle Dark Mode"><i class="fas fa-moon"></i></button></li>
+            </ul>
+            <div class="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </div>
+    </nav>
+
+    <article id="blog-post" class="blog-post-container">
+        <header class="post-header">
+            <div class="container">
+                <div class="post-meta">
+                    <a href="index.html" class="back-link"><i class="fas fa-arrow-left"></i> Back to Blog</a>
+                    <span id="post-date" class="date"></span>
+                </div>
+                <h1 id="post-title">Loading...</h1>
+            </div>
+        </header>
+
+        <div class="container post-body-container">
+            <img id="post-cover" src="" alt="Cover Image" class="post-cover-image" style="display: none;">
+            <div id="post-content" class="post-content">
+                <!-- Markdown content will be rendered here -->
+                <div class="loading-spinner">Loading post content...</div>
+            </div>
+        </div>
+    </article>
+
+    <footer>
+        <div class="container footer-container">
+            <p>&copy; 2025 Aron's Space. All rights reserved.</p>
+            <div class="social-links">
+                <a href="https://instagram.com/aronylucas" target="_blank" rel="noopener">Instagram</a>
+                <a href="https://www.youtube.com/@aronylucas4599" target="_blank" rel="noopener">YouTube</a>
+                <a href="https://linkedin.com/in/arony-lucas-6202211b8" target="_blank" rel="noopener">LinkedIn</a>
+            </div>
+            <p class="signature">Made by shedblack</p>
+        </div>
+    </footer>
+
+    <script src="../js/script.js"></script>
+    <script src="../js/blog.js"></script>
+</body>
+
+</html>
